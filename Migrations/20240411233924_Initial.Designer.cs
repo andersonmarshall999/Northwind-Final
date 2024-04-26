@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Northwind.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240411235029_RequireEmail")]
-    partial class RequireEmail
+    [Migration("20240411233924_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,7 +65,6 @@ namespace Northwind.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Fax")
